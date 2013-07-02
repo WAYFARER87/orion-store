@@ -1,0 +1,371 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{A45FD7F6-A1FB-4D9D-87EE-1DDA266B781E}</ProjectGuid>
+			<MainSource>IBStore.dpr</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>IBStore.exe</DCC_DependencyCheckOutputName>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_UsePackage>vcl;rtl;vclx;indy;inet;xmlrtl;vclie;inetdbbde;inetdbxpress;dbrtl;dsnap;dsnapcon;vcldb;soaprtl;VclSmp;dbexpress;dbxcds;inetdb;bdertl;vcldbx;webdsnap;websnap;adortl;ibxpress;teeui;teedb;tee;dss;visualclx;visualdbclx;vclactnband;vclshlctrls;IntrawebDB_50_70;Intraweb_50_70;Rave50CLX;Rave50VCL;dclOffice2k;FIBDBMidas7;EhLib70;frxADO7;frxBDE7;frx7;frxDBX7;frxe7;frxIBX7;fs7</DCC_UsePackage>
+			<DCC_Hints>false</DCC_Hints>
+			<DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;DbiErrs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_Platform>x86</DCC_Platform>
+			<DCC_K>false</DCC_K>
+			<DCC_N>true</DCC_N>
+			<DCC_S>false</DCC_S>
+			<DCC_F>false</DCC_F>
+			<DCC_SymbolReferenceInfo>1</DCC_SymbolReferenceInfo>
+			<DCC_UNIT_PLATFORM>false</DCC_UNIT_PLATFORM>
+			<DCC_E>false</DCC_E>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="IBStore.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Main.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="StoreDM.pas">
+				<Form>StoreDataModule</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="About.pas">
+				<Form>AboutBox</Form>
+			</DCCReference>
+			<DCCReference Include="Login.pas">
+				<Form>LoginForm</Form>
+			</DCCReference>
+			<DCCReference Include="Customer.pas">
+				<Form>CustomerForm</Form>
+			</DCCReference>
+			<DCCReference Include="CustomerItem.pas">
+				<Form>CustomerItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Product.pas">
+				<Form>ProductForm</Form>
+			</DCCReference>
+			<DCCReference Include="ProductItem.pas">
+				<Form>ProductItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="CategoryItem.pas">
+				<Form>CategoryItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Category.pas">
+				<Form>CategoryForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyOrder.pas">
+				<Form>BuyOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyOrderItem.pas">
+				<Form>BuyOrderItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyStructure.pas">
+				<Form>BuyStructureForm</Form>
+			</DCCReference>
+			<DCCReference Include="Store.pas">
+				<Form>StoreForm</Form>
+			</DCCReference>
+			<DCCReference Include="SaleOrder.pas">
+				<Form>SaleOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="SaleOrderItem.pas">
+				<Form>SaleOrderItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="DivisionItem.pas">
+				<Form>DivisionItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Options.pas">
+				<Form>OptionsForm</Form>
+			</DCCReference>
+			<DCCReference Include="SaleStructure.pas">
+				<Form>SaleStructureForm</Form>
+			</DCCReference>
+			<DCCReference Include="ProductSelect.pas">
+				<Form>ProductSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyStoreSelect.pas">
+				<Form>BuyStoreSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentCash.pas">
+				<Form>PaymentCashForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentCashItem.pas">
+				<Form>PaymentCashItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="CustomerSelect.pas">
+				<Form>CustomerSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="PayOrderSelect.pas">
+				<Form>PayOrderSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="FirmSelect.pas">
+				<Form>FirmSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeOrder.pas">
+				<Form>HomeOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeOrderItem.pas">
+				<Form>HomeOrderItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="DivisionSelect.pas">
+				<Form>DivisionSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="Bank.pas">
+				<Form>BankForm</Form>
+			</DCCReference>
+			<DCCReference Include="BankItem.pas">
+				<Form>BankItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="VAT.pas">
+				<Form>VATForm</Form>
+			</DCCReference>
+			<DCCReference Include="VATItem.pas">
+				<Form>VATItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="ProductDescription.pas">
+				<Form>ProductDescriptionForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyStoreItem.pas">
+				<Form>BuyStoreItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Measure.pas">
+				<Form>MeasureForm</Form>
+			</DCCReference>
+			<DCCReference Include="MeasureItem.pas">
+				<Form>MeasureItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Producer.pas">
+				<Form>ProducerForm</Form>
+			</DCCReference>
+			<DCCReference Include="ProducerItem.pas">
+				<Form>ProducerItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="CountryItem.pas">
+				<Form>CountryItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Country.pas">
+				<Form>CountryForm</Form>
+			</DCCReference>
+			<DCCReference Include="CCD.pas">
+				<Form>CCDForm</Form>
+			</DCCReference>
+			<DCCReference Include="CCDItem.pas">
+				<Form>CCDItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Certificate.pas">
+				<Form>CertificateForm</Form>
+			</DCCReference>
+			<DCCReference Include="CertificateItem.pas">
+				<Form>CertificateItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentOrder.pas">
+				<Form>PaymentOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentOrderItem.pas">
+				<Form>PaymentOrderItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="Firm.pas">
+				<Form>FirmForm</Form>
+			</DCCReference>
+			<DCCReference Include="FirmItem.pas">
+				<Form>FirmItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="BuyPriceItem.pas">
+				<Form>BuyPriceItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="TypePrice.pas">
+				<Form>TypePriceForm</Form>
+			</DCCReference>
+			<DCCReference Include="TypePriceItem.pas">
+				<Form>TypePriceItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentBank.pas">
+				<Form>PaymentBankForm</Form>
+			</DCCReference>
+			<DCCReference Include="PaymentBankItem.pas">
+				<Form>PaymentBankItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="StoreSelect.pas">
+				<Form>StoreSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeStructure.pas">
+				<Form>HomeStructureForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeStoreSelect.pas">
+				<Form>HomeStoreSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="StoreItem.pas">
+				<Form>StoreItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeStoreItem.pas">
+				<Form>HomeStoreItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="PrintOrder.pas">
+				<Form>PrintOrderForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeProperSelect.pas">
+				<Form>HomeProperSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="SaleProperSelect.pas">
+				<Form>SaleProperSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportDM.pas">
+				<Form>ReportDataModule</Form>
+				<DesignClass>TDataModule</DesignClass>
+			</DCCReference>
+			<DCCReference Include="ReportPriceList.pas">
+				<Form>ReportPriceListForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportPrice.pas">
+				<Form>ReportPriceForm</Form>
+			</DCCReference>
+			<DCCReference Include="Group.pas">
+				<Form>GroupForm</Form>
+			</DCCReference>
+			<DCCReference Include="GroupItem.pas">
+				<Form>GroupItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportOrderSelect.pas">
+				<Form>ReportOrderSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="VATRate.pas">
+				<Form>VATRateForm</Form>
+			</DCCReference>
+			<DCCReference Include="HomeTypeSelect.pas">
+				<Form>HomeTypeSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="Registration.pas">
+				<Form>RegistrationForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportDebtor.pas">
+				<Form>ReportDebtorForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportDebtorPrint.pas">
+				<Form>ReportDebtorPrintForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportDebtorSelect.pas">
+				<Form>ReportDebtorSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCashBook.pas">
+				<Form>ReportCashBookForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCashBookItem.pas">
+				<Form>ReportCashBookItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCashBookDateSelect.pas">
+				<Form>ReportCashBookDateSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="InitialBalance.pas">
+				<Form>InitialBalanceForm</Form>
+			</DCCReference>
+			<DCCReference Include="InitialBalanceItem.pas">
+				<Form>InitialBalanceItemForm</Form>
+			</DCCReference>
+			<DCCReference Include="InitialRemains.pas">
+				<Form>InitialRemainsForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCirculate.pas">
+				<Form>ReportCirculateForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCirculateSelect.pas">
+				<Form>ReportCirculateSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportRemains.pas">
+				<Form>ReportRemainsForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportCommodityMoney.pas">
+				<Form>ReportCommodityMoneyForm</Form>
+			</DCCReference>
+			<DCCReference Include="ReportRevise.pas">
+				<Form>ReportReviseForm</Form>
+			</DCCReference>
+			<DCCReference Include="IntervalSelect.pas">
+				<Form>IntervalSelectForm</Form>
+			</DCCReference>
+			<DCCReference Include="FirstAid.pas">
+				<Form>FirstAidForm</Form>
+			</DCCReference>
+			<DCCReference Include="..\PETR\DLIB\ssdefines.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>VCLApplication</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">IBStore.dpr</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">1</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1049</VersionInfo>
+						<VersionInfo Name="CodePage">1251</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName">Logos Software Corporation</VersionInfoKeys>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.1.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">IBStore</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">© Eugene Garifullin. All rights reserved.</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks">Logos ™</VersionInfoKeys>
+						<VersionInfoKeys Name="OriginalFilename">ibstore.exe</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductName">Storehouse Enterprise</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">1.1.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
